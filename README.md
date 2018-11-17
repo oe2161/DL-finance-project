@@ -1,5 +1,5 @@
 # DL-finance-project
-The repository for the code of our work on the project so far
+
 
 The paper we are studying is : "Deep Learning for Spatio-Temporal Modeling: Dynamic Traffic Flows and High Frequency Trading". The latter exposes how deep learning architectures can be used to spatio-temporal predictive modelling. Two applications are discussed. The first one is the traffic flow on a northbound section of Interstate I-55 (13 miles). The second one is short-term Futures Prices from high frequency data. We chose to focus on the second application.
 This paper tries to train a deep learning architecture to predict the variations of the mid price of futures on a stock each nanosecond according to the quoted price and depth of limit order book levels ("book pressure"). The main goal here is to detect selling agressors i.e. a market crossing limit order. 
