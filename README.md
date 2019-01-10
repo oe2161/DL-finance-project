@@ -8,8 +8,23 @@ The modelling challenge we face is the following : we consider a certain number 
 - The mid-price is going down
 - The mid-price is staying the same
 
-As complex and often nonlinear interactions exist between the orders’ volumes at different levels andtimes, this modelling problem reveals to be challenging. The deep learning models we develop in this paper apply layers of hierarchical hidden variables to capture these interactions. 
 
-In a first step, we will start our research with a rather simple deep learning architecture : a fully connected feed forward neural network. To train this model, we use limit order book data on "E-MiniSP 500 Futures" for the month of November. The most challenging part in the training of this model is the pre-processing of the data. Indeed, there is a strong imbalance in the observations of the different classes, as the mid price changes very few times in a window where the time step is approximately a millisecond. To solve this problem, we use a method which relies on the combination of undersampling and over-sampling techniques. We use the SMOTE algorithm (Synthetic Minority Oversampling TEchnique).
+We started by implementing two Feed Forward Neural Nets respecting the architecture of the original paper. The first one, is simply a reproduction of the original work. We added, as a direct extension of the paper,to the second architecture the spread of the book and therefore modified the structure of the DNN to incoporate this new information. 
 
-The second step we take is that we consider a Recurrent Neural Network architecture. The ability of RNN structure to capture the dependency to previously perceived inputs allows it to have a memory, which is the improvement we want for the Feed Forward Network. We focus on the famous LSTM (Long-ShortTerm Memory) which has proven to be extremely efficient in similar problems as ours. First, we train an LSTM structure on the mid-price values through time. Then, we train it on the limit order book snapshots.
+As a more sophisticated approach, we implemented two RNN with LSTM cells. The first is a one layer RNN. The second a multilayered RNN as several papers show the importance of stacking layers.
+
+To try the scripts, simply download them and the order book data. Put the script and data in the same repository, select the number of rows (start with 10000 rows in our opinion) and run the script. The end result will be different graphs showing the predictive power of the trained graph.
+
+We inspired our work from several papers:
+
+Alex Graves, Abdel-rahman Mohamed, and Geoffrey Hinton. Speech recognition with deep recurrent
+neural networks.
+Michiel Hermans and Benjamin Schrauwen. Training and analysing deep recurrent neural networks.
+Razvan Pascanu, Caglar Gulcehre, Kyunghyun Cho, and Yoshua Bengio. How to construct deep recurrent
+neural networks.
+Zhengping Che, Sanjay Purushotham, Kyunghyun Cho, David Sontag, and Yan Liu. Recurrent neural
+networks for multivariate time series with missing values.
+Matthew F Dixon, Nicholas G Polson, and Vadim O Sokolov. Deep learning for spatio-temporal modeling:
+Dynamic traffic flows and high frequency trading.
+Pankaj Malhotra, Lovekesh Vig, Gautam Shroff, and Puneet Agarwal. Long short term memory networks
+for anomaly detection in time series. 
