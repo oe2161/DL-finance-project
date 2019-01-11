@@ -15,16 +15,19 @@ As a more sophisticated approach, we implemented two RNN with LSTM cells. The fi
 
 To try the scripts, simply download them and the order book data. Put the script and data in the same repository, select the number of rows (start with 10000 rows in our opinion) and run the script. The end result will be different graphs showing the predictive power of the trained graph.
 
+For the Neural Turing Machine code, you need to dowload the library from the repo: https://github.com/flomlo/ntm_keras/blob/master/ntm.py?fbclid=IwAR1vmFqxlmP0pNptPTPbekqPKy7QfsXjzqjYIQ32EyXedBgxPgHGSG6kvos
+and then dowload the script and import the ntm as a library.
+
 We inspired our work from several papers:
 
-Alex Graves, Abdel-rahman Mohamed, and Geoffrey Hinton. Speech recognition with deep recurrent
+- Alex Graves, Abdel-rahman Mohamed, and Geoffrey Hinton. Speech recognition with deep recurrent
 neural networks.
-Michiel Hermans and Benjamin Schrauwen. Training and analysing deep recurrent neural networks.
-Razvan Pascanu, Caglar Gulcehre, Kyunghyun Cho, and Yoshua Bengio. How to construct deep recurrent
+- Michiel Hermans and Benjamin Schrauwen. Training and analysing deep recurrent neural networks.
+- Razvan Pascanu, Caglar Gulcehre, Kyunghyun Cho, and Yoshua Bengio. How to construct deep recurrent
 neural networks.
-Zhengping Che, Sanjay Purushotham, Kyunghyun Cho, David Sontag, and Yan Liu. Recurrent neural
+- Zhengping Che, Sanjay Purushotham, Kyunghyun Cho, David Sontag, and Yan Liu. Recurrent neural
 networks for multivariate time series with missing values.
-Matthew F Dixon, Nicholas G Polson, and Vadim O Sokolov. Deep learning for spatio-temporal modeling:
+- Matthew F Dixon, Nicholas G Polson, and Vadim O Sokolov. Deep learning for spatio-temporal modeling:
 Dynamic traffic flows and high frequency trading.
-Pankaj Malhotra, Lovekesh Vig, Gautam Shroff, and Puneet Agarwal. Long short term memory networks
+- Pankaj Malhotra, Lovekesh Vig, Gautam Shroff, and Puneet Agarwal. Long short term memory networks
 for anomaly detection in time series. 
